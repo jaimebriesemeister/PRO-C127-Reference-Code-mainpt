@@ -24,7 +24,7 @@ def scrape():
         # Objeto BeautifulSoup
         soup = BeautifulSoup(browser.page_source, "html.parser")
 
-        # Loop para encontrar o elemento usando XPATH
+        # Loop para encontrar o elemento dentro das tags ul e ui
         for ul_tag in soup.find_all("ul", attrs={"class", "exoplanet"}):
 
             li_tags = ul_tag.find_all("li")
